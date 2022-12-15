@@ -12,7 +12,7 @@
             <li><a href="http://localhost:8000"><span>Boost'tic Créations</span></a></li>
           </ul>
         </li>
-        <li><a href="http://localhost:8000"><span>Nous contacter</span></a></li>
+        <li><a href="http://localhost:8000/contact"><span>Nous contacter</span></a></li>
       </ul>
     </nav>
     <span class="copyright">Copyright © 2021-2023 Boost'tic</span>
