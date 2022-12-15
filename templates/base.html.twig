@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="content-language" content="fr-FR">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        <meta name="description" content="{%block description %}La formule Agile{% endblock %}">
+        <link rel="icon" href="{{ asset('favicon.ico') }}">
+        {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
+        {% block stylesheets %}
+            {{ encore_entry_link_tags('reset') }}
+            {{ encore_entry_link_tags('app') }}
+        {% endblock %}
+        {% block meta %}{% endblock %}
+    </head>
+    <body>
+        <header>
+
+        </header>
+        <main>{% block content %}{% endblock %}</main>
+        <footer>
+            <a href="https://www.boosttic.com" target="_blank"><img decoding="async" loading="lazy" src="{{ asset('build/images/logo_boosttic.svg') }}" alt="Boost'tic"></a>
+        </footer>
+    </body>
+    {% block javascripts %}
+        {{ encore_entry_script_tags('app') }}
+    {% endblock %}
+</html>
