@@ -10,3 +10,15 @@ import './styles/app.css';
 
 // start the Stimulus application
 import './bootstrap';
+import {createApp} from "vue";
+import Menu from "./components/menu/menu.vue";
+const $ = require('jquery');
+
+$(document).ready(function() {
+    let vue = createApp({
+        components: {
+            Menu
+        }
+    }).mount('#navigation')
+    console.log(vue)
+})
