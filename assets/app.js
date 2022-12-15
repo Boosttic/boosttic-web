@@ -11,14 +11,11 @@ import './styles/app.css';
 // start the Stimulus application
 import './bootstrap';
 import {createApp} from "vue";
-import Menu from "./components/menu/menu.vue";
+import ExpandMenu from "./components/menu/expandMenu.vue";
 const $ = require('jquery');
 
 $(document).ready(function() {
-    let vue = createApp({
-        components: {
-            Menu
-        }
+    createApp({
+        components: { ExpandMenu }
     }).mount('#navigation')
-    console.log(vue)
 })
