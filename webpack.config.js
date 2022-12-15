@@ -76,6 +76,9 @@ Encore
     // uncomment if you use TypeScript
     //.enableTypeScriptLoader()
 
+    // uncomment if you use VueJs
+    .enableVueLoader()
+
     // uncomment if you use React
     //.enableReactPreset()
 
