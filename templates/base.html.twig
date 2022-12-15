@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="content-language" content="fr-FR">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <title>{% block title %}Boost'tic{% endblock %}</title>
         <meta name="description" content="{%block description %}La formule Agile{% endblock %}">
         <link rel="icon" href="{{ asset('favicon.ico') }}">
         {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
@@ -15,12 +15,66 @@
         {% block meta %}{% endblock %}
     </head>
     <body>
-        <header>
-
+        <header class="header">
+            <a href="{{ path('home') }}"><img decoding="async" loading="lazy" height="40" src="{{ asset('build/images/logo_boosttic.svg') }}" alt="Boost'tic"></a>
+            <nav id="navigation">
+                <menu></menu>
+            </nav>
         </header>
-        <main>{% block content %}{% endblock %}</main>
-        <footer>
-            <a href="https://www.boosttic.com" target="_blank"><img decoding="async" loading="lazy" src="{{ asset('build/images/logo_boosttic.svg') }}" alt="Boost'tic"></a>
+        <main class="content">{% block content %}{% endblock %}</main>
+        <footer class="footer">
+            <div class="footer-informations">
+                <div class="footer-left">
+                    <div class="footer-us">
+                        <a href="https://www.boosttic.com" target="_blank"><img decoding="async" loading="lazy" height="32" src="{{ asset('build/images/logo_boosttic.svg') }}" alt="Boost'tic"></a>
+                    </div>
+                    <div class="footer-certifications-block">
+                        <h2>Nos certifications</h2>
+                        <div class="footer-certifications">
+                            <h3>
+                                <picture>
+                                    <source srcset="{{ asset('build/images/datadock.avif') }}" type="image/avif">
+                                    <img decoding="async" loading="lazy" src="{{ asset('build/images/datadock.png') }}" alt="Certification Datadocké">
+                                </picture>
+                            </h3>
+                            <h3>
+                                <picture>
+                                    <source srcset="{{ asset('build/images/qualiopi.avif') }}" type="image/avif">
+                                    <img decoding="async" loading="lazy" src="{{ asset('build/images/qualiopi.png') }}" alt="Certification Qualiopi Catégories d'action : actions de formation">
+                                </picture>
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-right">
+                    <div class="footer-sitemap-block">
+                        <h2>Plan du site</h2>
+                        <div class="footer-sitemap">
+                            <div>
+                                <h3>Produits</h3>
+                                <ul>
+                                    <li><a href="">La Formule Agile</a></li>
+                                    <li><a href="">Compétences'n Co</a></li>
+                                    <li><a href="">Boost'tic Créations</a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h3>A propos</h3>
+                                <ul>
+                                    <li><a href="">Nous contactez</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-link">
+                <p class="footer-politic"><span>Copyright © 2021-{{ "now"|date("Y") }} Boost'tic</span><span>Tous droits réservés</span><span><a href="">Mentions légales</a></span><span><a href="">Politique de confidentialité</a></span></p>
+                <div class="footer-social">
+                    <a target="_blank" href="https://fr.linkedin.com/company/boosttic"><img decoding="async" loading="lazy" src="{{ asset('build/images/linkedin.svg') }}" alt="Linkedin"></a>
+                    <a target="_blank" href="https://www.youtube.com/channel/UCz9OyWIPAqeSC_rJHRnWiPA"><img decoding="async" loading="lazy" src="{{ asset('build/images/youtube.svg') }}" alt="Youtube"></a>
+                </div>
+            </div>
         </footer>
     </body>
     {% block javascripts %}

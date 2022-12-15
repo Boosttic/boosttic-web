@@ -1,3 +1,237 @@
-footer {
-    background-color: lightgray;
+*
+{
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    font-family: sans-serif;
+    color: #353431;
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a.btn:hover {
+    text-decoration: none;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #212F4F;
+    color: #FFFFFF;
+    height: 80px;
+    padding: 40px;
+}
+
+.header a {
+    display: flex;
+    align-items: center;
+}
+
+.content {
+    padding: 32px 0;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    color: #FFFFFF;
+    font-size: .8rem;
+    margin-top: -33px;
+}
+
+.footer a {
+    color: #FFFFFF;
+}
+
+.footer-informations {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #353431;
+    padding-bottom: 48px;
+    clip-path: polygon(0 32px, 100% 0, 100% 100%, 0 100%);
+}
+
+.footer-left {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-us {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 64px;
+    gap: 16px;
+}
+
+.footer-certifications-block {
+    display: flex;
+    flex-direction: column;
+    margin: 16px 0;
+}
+
+.footer-certifications {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 16px;
+}
+
+.footer-certifications img {
+    height: 72px;
+}
+
+.footer-link {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    padding: 48px 0 32px 0;
+    margin-top: -32px;
+    width: 100%;
+    background-color: #212F4F;
+    clip-path: polygon(0 32px, 100% 0, 100% 100%, 0 100%);
+}
+
+.footer-sitemap {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer h2 {
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.footer-sitemap h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 8px 0;
+}
+
+.footer ul {
+    display: flex;
+    flex-direction: column;
+    font-style: italic;
+    gap: 8px;
+}
+
+.footer-social {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    padding-bottom: 8px;
+}
+
+.footer-social a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-politic {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+    .navigation ul {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 32px;
+        height: 100%;
+    }
+
+    .content {
+        padding: 96px 0;
+    }
+
+    .footer {
+        margin-top: -98px;
+    }
+
+    .footer-informations {
+        flex-direction: row;
+        justify-content: space-evenly;
+        padding: 96px 0 24px 0;
+        clip-path: polygon(0 96px, 100% 0, 100% 100%, 0 100%);
+    }
+
+    .footer-us {
+        margin-top: 24px;
+    }
+
+    .footer-link {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 16px 48px;
+        margin-top: 0;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    .footer-certifications img {
+        height: 80px;
+    }
+
+    .footer-sitemap {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        font-size: .8rem;
+        gap: 40px;
+        text-align: left;
+    }
+
+    .footer-social {
+        padding-bottom: 0;
+    }
+
+    .footer-social img {
+        width: 24px;
+    }
+
+    .footer-politic {
+        flex-direction: row;
+        gap: 8px;
+    }
+
+    .footer-politic span:not(:last-child):after {
+        content: "-";
+        margin-left: 8px;
+    }
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+    .footer-link {
+        padding: 12px 140px;
+    }
+
 }
