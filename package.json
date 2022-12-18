@@ -24,6 +24,7 @@
         "build": "encore production --progress"
     },
     "dependencies": {
-        "jquery": "^3.6.2"
+        "jquery": "^3.6.2",
+        "swiper": "^8.4.5"
     }
 }

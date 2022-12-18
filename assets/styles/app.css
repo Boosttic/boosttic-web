@@ -160,16 +160,19 @@ h1, h2, h3 {
 
 h1 {
     font-size: 2rem;
+    line-height: 48px;
     font-weight: 900;
 }
 
 h2 {
     font-size: 1.5rem;
+    line-height: 36px;
     font-weight: 700;
 }
 
 h3 {
     font-size: 1.25rem;
+    line-height: 30px;
     font-weight: 600;
 }
 
@@ -185,6 +188,19 @@ a:hover {
 
 a.btn:hover {
     text-decoration: none;
+}
+
+strong {
+    font-weight: 700;
+}
+
+.btn {
+    background-color: #EF7D19;
+    color: #FFFFFF;
+    padding: 16px;
+    border: none;
+    border-radius: 16px;
+    font-weight: 600;
 }
 
 .header {
