@@ -102,15 +102,11 @@ export default {
 
   .product span {
     max-width: 400px;
-    height: 100%;
-    max-height: 168px;
   }
 
   .product ul {
     text-align: left;
     list-style: inside url("../../../public/build/images/icons/check.svg");
-    height: 100%;
-    max-height: 256px;
   }
 
   .product-lfa {
@@ -127,6 +123,16 @@ export default {
 
   /* Large devices (laptops/desktops, 992px and up) */
   @media only screen and (min-width: 992px) {
+
+    .product span {
+      height: 100%;
+      max-height: 168px;
+    }
+
+    .product ul {
+      height: 100%;
+      max-height: 256px;
+    }
 
     .product-lfa {
       clip-path: polygon(0 0,100% 0,calc(100% - 128px) 100%,0 100%);
