@@ -1,3 +1,77 @@
 .hero-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: calc(100vh - 80px);
+}
+
+h1 {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.service-block {
+    padding: 16px;
+    margin-bottom: 64px;
+}
+
+.services {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.service {
+    display: flex;
+    gap: 128px;
+}
+
+.service:nth-child(2n) {
+    flex-direction: row-reverse;
+}
+
+.service:nth-child(2n+1) {
+    flex-direction: row;
+}
+
+.service ul {
+    list-style: inside;
+}
+
+.service div {
+    width: 100%;
+}
+
+.service img {
+    display: none;
+}
+
+.answer {
+    display: none;
+}
+
+.answer.displayed {
+    display: block;
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+    .services {
+        gap: 128px;
+    }
+
+    .service div, .service img {
+        width: 50%;
+    }
+
+    .service img {
+        display: block;
+    }
+
+    .answer {
+        display: block;
+    }
+
 }

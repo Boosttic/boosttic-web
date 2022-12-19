@@ -7,6 +7,79 @@
 
 {% block content %}
     <div class="hero-block">
-
+        <h1><img height="64" src="{{ asset('build/images/logo_boosttic.svg') }}" alt="Boost'tic"><span>Innover pour mieux (in)former</span></h1>
     </div>
+    <div class="product-block">
+        <h2>Nos produits</h2>
+        <div id="products">
+            <products></products>
+        </div>
+    </div>
+    <div class="service-block">
+        <h2>Les services Boost'tic</h2>
+        <div class="services">
+            <div class="service">
+                <div>
+                    <h3>Prise en charge de la demande client</h3>
+                    <div class="answer">
+                        <span>Chez Boost'tic, <strong>nous nous adaptons à chacun de nos clients</strong> pour répondre au plus près à son besoin, avec :</span>
+                        <ul>
+                            <li>L'étude du contexte et audit</li>
+                            <li>L'analyse de l'existant</li>
+                            <li>Le cadrage des objectifs du projet</li>
+                            <li>La prise en compte des contraintes client</li>
+                        </ul>
+                    </div>
+                </div>
+                <img src="" alt="Prise en charge de la demande client">
+            </div>
+            <div class="service">
+                <div>
+                    <h3>De 0 ou à partir de l'existant</h3>
+                    <div class="answer">
+                        <span>Que votre projet soit de <strong>digitaliser une information</strong> déjà existante ou au contraire, de créer une information de toute pièce, l'équipe Boost'tic vous propose :</span>
+                        <ul>
+                            <li>La création totale du contenu ( définition et mise en forme du message )</li>
+                            <li>La réalisation graphique à partir d'un script</li>
+                        </ul>
+                    </div>
+                </div>
+                <img src="" alt="De 0 ou à partir de l'existant">
+            </div>
+            <div class="service">
+                <div>
+                    <h3>Avec une réalisation "simple" (technicité)</h3>
+                    <div class="answer">
+                        <span>Les compétences internes de Boost'tic nous permettent de réaliser <strong>des productions "simple"</strong> comme des productions plus "poussées", faisant appel à des techniques différentes :</span>
+                        <ul>
+                            <li>Motion design, mise en page, infographies, voix off...</li>
+                            <li>Avec ou sans interactivité</li>
+                        </ul>
+                    </div>
+                </div>
+                <img src="" alt="Avec une réalisation 'simple' (technicité)">
+            </div>
+            <div class="service">
+                <div>
+                    <h3>Ou une réalisation "poussée" (technicité)</h3>
+                    <div class="answer">
+                        <span>Pour encore plus d'<strong>engagement</strong>, Boost'tic optimise le <strong>flux d'informations</strong> en développant l'<strong>interaction</strong> avec l'audience :</span>
+                        <ul>
+                            <li>Création de l'accroche narrative (storytelling)</li>
+                            <li>Conceptions graphiques : 2D, 3D, illustrations, bande dessinée</li>
+                            <li>Montage vidéo : Motion design, sous-titres, voix-off, animation de photos...</li>
+                            <li>Complément d'information : incrustation (puces, photos, vidéos...)</li>
+                            <li>Avec interactivité : Questions/Réponses, jeu interractif...</li>
+                        </ul>
+                    </div>
+                </div>
+                <img src="" alt="Ou une réalisation 'poussée' (technicité)">
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    {{ encore_entry_script_tags('home') }}
 {% endblock %}

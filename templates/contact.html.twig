@@ -1,5 +1,89 @@
 {% extends "base.html.twig" %}
 
-{% block content %}
+{% block stylesheets %}
+    {{ parent() }}
+    {{ encore_entry_link_tags('contact') }}
+{% endblock %}
 
+{% block meta %}
+    <meta name="robots" content="noindex">
+{% endblock %}
+
+{% block content %}
+    <h1>Nous contactez</h1>
+    <div class="contact-block">
+        <div class="physics-block">
+            <div class="mail-block">
+                <h2>Par courrier</h2>
+                <div class="mail-text">
+                    <span>Vous êtes plutôt pour nous envoyer une lettre, détaillant votre demande.<br>Envoyez votre courrier à : </span>
+                    <span><strong>221 Rue du connilot<br>50400 GRANVILLE</strong></span>
+                </div>
+            </div>
+            <div class="phone-block">
+                <h2>Par courriel / téléphone</h2>
+                <div class="phone-text">
+                    <span>Contactez directement notre service commercial pour avoir plus d'informations</span>
+                    <ul>
+                        <li><i><img width="32" src="{{ asset('build/images/phone.svg') }}" alt=""></i><span>06 31 51 42 00</span></li>
+                        <li><i><img width="32" src="{{ asset('build/images/mail.svg') }}" alt=""></i><span>contact@boosttic.com</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="form-block">
+            <h2>Par formulaire</h2>
+            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. </span>
+            {{ form_start(form) }}
+            <div class="form-content">
+                <div class="form-group">
+                    <div class="form-row-2">
+                        <div class="mb-3 row">
+                            {{ form_label(form.firstname) }}
+                            <i class="form-required">*</i>
+                            <div class="col-sm-10">
+                                {{ form_widget(form.firstname) }}
+                            </div>
+                        </div>
+                        <div class="mb-3 row">
+                            {{ form_label(form.lastname) }}
+                            <i class="form-required">*</i>
+                            <div class="col-sm-10">
+                                {{ form_widget(form.lastname) }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-row-2">
+                        <div class="mb-3 row">
+                            {{ form_label(form.mail) }}
+                            <i class="form-required">*</i>
+                            <div class="col-sm-10">
+                                {{ form_widget(form.mail) }}
+                            </div>
+                        </div>
+                        <div class="mb-3 row">
+                            {{ form_label(form.phone) }}
+                            <div class="col-sm-10">
+                                {{ form_widget(form.phone) }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="mb-3 row">
+                        {{ form_label(form.project) }}
+                        <i class="form-required">*</i>
+                        <div class="col-sm-10">
+                            {{ form_widget(form.project) }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <span class="form-info">Les champs avec un <i class="form-required">*</i> doivent être remplis.</span>
+            <button class="btn" type="submit" style="margin: auto">Envoyer le message</button>
+            {{ form_end(form) }}
+        </div>
+    </div>
 {% endblock %}
