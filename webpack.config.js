@@ -35,6 +35,7 @@ Encore
      */
     .addEntry('app', './assets/app.js')
     .addEntry('home', './assets/home.js')
+    .addEntry('creations', './assets/creations.js')
     .addStyleEntry('reset', './assets/styles/reset.css')
     .addStyleEntry('contact', './assets/styles/contact.css')
 

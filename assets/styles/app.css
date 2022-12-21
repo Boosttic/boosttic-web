@@ -211,6 +211,8 @@ strong {
     color: #FFFFFF;
     height: 56px;
     padding: 0 16px;
+    z-index: 2;
+    position: sticky;
 }
 
 .header a {

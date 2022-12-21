@@ -8,10 +8,14 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
+/**
+ * @author Matthieu PAYS <matthieu.pays@boosttic.com>
+ */
 class ContactController extends AbstractController
 {
 
     /**
+     * Returns the view to contact the company
      * @return Response
      */
     #[Route('/contact', 'nous-contactez')]
