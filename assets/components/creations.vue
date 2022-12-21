@@ -3,6 +3,9 @@
 </template>
 
 <script>
+/**
+ * @author Matthieu PAYS <matthieu.pays@boosttic.com>
+ */
 export default {
   name: "creations"
 }

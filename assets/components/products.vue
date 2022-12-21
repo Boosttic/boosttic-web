@@ -54,12 +54,17 @@ import { Pagination } from "swiper";
 // Import Swiper styles
 import 'swiper/css/bundle';
 
+/**
+ * @author Matthieu PAYS <matthieu.pays@boosttic.com>
+ */
 export default {
   name: "products",
   data() {
     return {
-      mobile: null,
-      slide: null
+      /**
+       * Used to know if you are on the phone
+       */
+      mobile: null
     }
   },
   components: {
@@ -67,6 +72,9 @@ export default {
     SwiperSlide,
   },
   methods: {
+    /**
+     * Checks if the user is on the phone
+     */
     checkScreen() {
       this.mobile = window.innerWidth <= 991;
     }

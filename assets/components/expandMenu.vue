@@ -20,14 +20,23 @@
 </template>
 
 <script>
+/**
+ * @author Matthieu PAYS <matthieu.pays@boosttic.com>
+ */
 export default {
   name: "expandMenu",
   data() {
     return {
+      /**
+       * Used for the phone to know if the user wants to navigate the menu
+       */
       isDisplayed: false
     }
   },
   methods: {
+    /**
+     * Display or not the phone menu
+     */
     display() {
       this.isDisplayed = !this.isDisplayed
     }
