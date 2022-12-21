@@ -28,7 +28,7 @@
           <li>Garder la valeur ajoutée</li>
           <li>Automatisation de l'information</li>
         </ul>
-        <a class="btn" href="">En savoir +</a>
+        <a class="btn" href="http://localhost:8000/creations">En savoir +</a>
       </div>
     </swiper-slide>
     <swiper-slide>
@@ -86,7 +86,7 @@ export default {
 <style scoped>
 
   .swiper-slide {
-    height: 80vh;
+    height: 776px;
   }
 
   .product {
@@ -106,7 +106,7 @@ export default {
 
   .product ul {
     text-align: left;
-    list-style: inside url("../../../public/build/images/icons/check.svg");
+    list-style: inside url("../../public/build/images/icons/check.svg");
   }
 
   .product-lfa {

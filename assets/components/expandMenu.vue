@@ -9,7 +9,7 @@
           <ul class="sub-nav">
             <li><a href="https://www.laformuleagile.com"><span>La Formule Agile</span></a></li>
             <li><a href="https://www.competencesnco.com"><span>Competences'n Co</span></a></li>
-            <li><a href="http://localhost:8000"><span>Boost'tic Créations</span></a></li>
+            <li><a href="http://localhost:8000/creations"><span>Boost'tic Créations</span></a></li>
           </ul>
         </li>
         <li><a href="http://localhost:8000/contact"><span>Nous contacter</span></a></li>
@@ -131,7 +131,6 @@ export default {
     align-items: flex-start;
     gap: 16px;
     padding: 16px 0;
-    background-color: #FFFFFF;
     color: #0a0a0a;
     width: 256px;
   }
