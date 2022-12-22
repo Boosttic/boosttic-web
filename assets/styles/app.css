@@ -195,6 +195,7 @@ strong {
 }
 
 .btn {
+    display: inline-block;
     background-color: #EF7D19;
     color: #FFFFFF;
     padding: 16px;
