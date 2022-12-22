@@ -2,14 +2,40 @@
 
 {% block stylesheets %}
     {{ parent() }}
-    {{ encore_entry_link_tags('creations') }}
+    {{ encore_entry_link_tags('creations_index') }}
 {% endblock %}
 
 {% block content %}
     <h1>Nos créations</h1>
     <div class="creation-block">
         <div id="creations">
-            
+            <div class="creations-list">
+                {% for year, projectList in projects %}
+                    <div class="year-projects">
+                        <span class="year">{{ year }}</span>
+                        <div class="year-projects-list">
+                            {% for project in projectList %}
+                                <a class="project" href="{{ path('creations_view', {slug: project.slug}) }}">
+                                    <div class="project-presentation">
+                                        <picture>
+                                            {% if project.pictureAvif != null %}
+                                                <source srcset="{{ asset('uploads/image/'~article.pictureAvif) }}" class="article-picture">
+                                            {% endif %}
+                                            <img width="100%" height="100%" decoding="async" loading="lazy" src="{{ asset('build/images/test.png') }}" alt="{{ project.name }}" class="article-picture">
+                                        </picture>
+                                        <span class="project-type">{{ project.type.name }}</span>
+                                    </div>
+                                    <div class="project-text">
+                                        <h3>{{ project.name }}</h3>
+                                        <p>{{ project.summary }}</p>
+                                        <span class="btn">En voir +</span>
+                                    </div>
+                                </a>
+                            {% endfor %}
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
         </div>
     </div>
 {% endblock %}
