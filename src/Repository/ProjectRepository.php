@@ -4,6 +4,7 @@ namespace App\Repository;
 
 use App\Entity\Project;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
+use Doctrine\ORM\NonUniqueResultException;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
@@ -48,6 +49,20 @@ class ProjectRepository extends ServiceEntityRepository
             ->orderBy('p.created_at', 'DESC')
             ->getQuery()
             ->getResult();
+    }
+
+    /**
+     * @param string $slug
+     * @return Project|null
+     * @throws NonUniqueResultException
+     */
+    public function findBySlug(string $slug): ?Project
+    {
+        return $this->createQueryBuilder('p')
+            ->where('p.slug = :slug')
+            ->setParameter('slug', $slug)
+            ->getQuery()
+            ->getOneOrNullResult();
     }
 
 //    /**

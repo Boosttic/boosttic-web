@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Repository\ProjectRepository;
+use Doctrine\ORM\NonUniqueResultException;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -56,7 +57,18 @@ class CreationController extends AbstractController
     #[Route('/creations/{slug}', 'creations_view')]
     public function viewCreation(string $slug): Response
     {
-        return $this->render('creations/view.html.twig');
+        try {
+            $project = $this->projectRepository->findBySlug($slug);
+            if ($project != null) {
+                return $this->render('creations/view.html.twig', [
+                    'project' => $project
+                ]);
+            }else {
+                throw $this->createNotFoundException();
+            }
+        } catch (NonUniqueResultException $e) {
+            return new Response($e);
+        }
     }
 
 }
