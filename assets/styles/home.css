@@ -1,7 +1,6 @@
 .hero-block {
     display: flex;
     justify-content: center;
-    align-items: center;
     height: calc(100vh - 80px);
     background-color: #ffe1a0;
 }
@@ -18,16 +17,25 @@ h1 {
     flex-direction: column;
     text-align: center;
     z-index: 2;
+    margin-top: 15vh;
     position: sticky;
     /*margin-bottom: 70vh;*/
     font-weight: 600;
     color: #212F4F;
     padding: 64px 128px;
-    background-color: rgba(255,255,255,72%);
 }
 
 .product-block {
+    position: relative;
     background-color: #ffe1a0;
+}
+
+.product-block h2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 16px;
+    z-index: 2;
 }
 
 .service-block {
