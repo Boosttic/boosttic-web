@@ -137,21 +137,21 @@ export default {
 
   .product ul {
     text-align: left;
-    list-style: inside url("../../public/build/images/icons/check.svg");
+    list-style: inside url("../images/icons/check.svg");
   }
 
   .product-lfa {
-    background: url("../../public/build/images/produit_laformuleagile.png") no-repeat;
+    background: url("../images/products/produit_laformuleagile.png") no-repeat;
     background-size: cover;
   }
 
   .product-boosttic {
-    background: url("../../public/build/images/produit_boosttic.png") no-repeat;
+    background: url("../images/products/produit_boosttic.png") no-repeat;
     background-size: cover;
   }
 
   .product-cnco {
-    background: url("../../public/build/images/produit_competencesnco.png") no-repeat;
+    background: url("../images/products/produit_competencesnco.png") no-repeat;
     background-size: cover;
   }
 

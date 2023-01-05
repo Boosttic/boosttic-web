@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>{% block title %}Boost'tic{% endblock %}</title>
         <meta name="description" content="{%block description %}La formule Agile{% endblock %}">
-        <link rel="icon" href="{{ asset('build/images/logo_boosttic.svg') }}">
+        <link rel="icon" href="{{ asset('build/images/logo/logo_boosttic.svg') }}">
         {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
         {% block stylesheets %}
             {{ encore_entry_link_tags('reset') }}
@@ -16,7 +16,7 @@
     </head>
     <body>
         <header class="header">
-            <a href="{{ path('home') }}"><img decoding="async" loading="lazy" height="32" src="{{ asset('build/images/logo_boosttic.svg') }}" alt="Boost'tic"></a>
+            <a href="{{ path('home') }}"><img decoding="async" loading="lazy" height="32" src="{{ asset('build/images/logo/logo_boosttic.svg') }}" alt="Boost'tic"></a>
             <div id="navigation">
                 <expand-menu></expand-menu>
             </div>
@@ -26,21 +26,21 @@
             <div class="footer-informations">
                 <div class="footer-left">
                     <div class="footer-us">
-                        <a href="https://www.boosttic.com" target="_blank"><img decoding="async" loading="lazy" height="32" src="{{ asset('build/images/logo_boosttic.svg') }}" alt="Boost'tic"></a>
+                        <a href="https://www.boosttic.com" target="_blank"><img decoding="async" loading="lazy" height="32" src="{{ asset('build/images/logo/logo_boosttic.svg') }}" alt="Boost'tic"></a>
                     </div>
                     <div class="footer-certifications-block">
                         <h2>Nos certifications</h2>
                         <div class="footer-certifications">
                             <h3>
                                 <picture>
-                                    <source srcset="{{ asset('build/images/datadock.avif') }}" type="image/avif">
-                                    <img decoding="async" loading="lazy" src="{{ asset('build/images/datadock.png') }}" alt="Certification Datadocké">
+                                    <source srcset="{{ asset('build/images/logo/datadock.avif') }}" type="image/avif">
+                                    <img decoding="async" loading="lazy" src="{{ asset('build/images/logo/datadock.png') }}" alt="Certification Datadocké">
                                 </picture>
                             </h3>
                             <h3>
                                 <picture>
-                                    <source srcset="{{ asset('build/images/qualiopi.avif') }}" type="image/avif">
-                                    <img decoding="async" loading="lazy" src="{{ asset('build/images/qualiopi.png') }}" alt="Certification Qualiopi Catégories d'action : actions de formation">
+                                    <source srcset="{{ asset('build/images/logo/qualiopi.avif') }}" type="image/avif">
+                                    <img decoding="async" loading="lazy" src="{{ asset('build/images/logo/qualiopi.png') }}" alt="Certification Qualiopi Catégories d'action : actions de formation">
                                 </picture>
                             </h3>
                         </div>
@@ -71,8 +71,8 @@
             <div class="footer-link">
                 <p class="footer-politic"><span>Copyright © 2021-{{ "now"|date("Y") }} Boost'tic</span><span>Tous droits réservés</span><span><a href="">Mentions légales</a></span><span><a href="">Politique de confidentialité</a></span></p>
                 <div class="footer-social">
-                    <a target="_blank" href="https://fr.linkedin.com/company/boosttic"><img decoding="async" loading="lazy" src="{{ asset('build/images/linkedin.svg') }}" alt="Linkedin"></a>
-                    <a target="_blank" href="https://www.youtube.com/channel/UCz9OyWIPAqeSC_rJHRnWiPA"><img decoding="async" loading="lazy" src="{{ asset('build/images/youtube.svg') }}" alt="Youtube"></a>
+                    <a target="_blank" href="https://fr.linkedin.com/company/boosttic"><img decoding="async" loading="lazy" src="{{ asset('build/images/icons/linkedin.svg') }}" alt="Linkedin"></a>
+                    <a target="_blank" href="https://www.youtube.com/channel/UCz9OyWIPAqeSC_rJHRnWiPA"><img decoding="async" loading="lazy" src="{{ asset('build/images/icons/youtube.svg') }}" alt="Youtube"></a>
                 </div>
             </div>
         </footer>

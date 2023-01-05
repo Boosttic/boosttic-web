@@ -213,7 +213,7 @@ strong {
     color: #FFFFFF;
     height: 56px;
     padding: 0 16px;
-    z-index: 2;
+    z-index: 5;
     width: 100%;
     position: fixed;
 }
