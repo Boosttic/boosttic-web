@@ -92,7 +92,7 @@
     list-style: inside;
 }
 
-.service div {
+.service-text {
     width: 100%;
 }
 
@@ -137,11 +137,15 @@
         height: calc(100vh - 80px);
     }
 
+    .service-block {
+        margin-bottom: 128px;
+    }
+
     .services {
         gap: 128px;
     }
 
-    .service div, .service img {
+    .service-text, .service img {
         width: 50%;
     }
 
