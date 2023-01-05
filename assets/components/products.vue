@@ -100,8 +100,12 @@ export default {
 
 <style scoped>
 
+  .swiper {
+    height: 100%;
+  }
+
   .swiper-slide {
-    height: 100vh;
+    height: 100%;
   }
 
   .product {

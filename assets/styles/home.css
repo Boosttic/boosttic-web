@@ -43,6 +43,7 @@
 .product-block {
     position: relative;
     background-color: #ffe1a0;
+    height: calc(100vh - 56px);
 }
 
 .product-block h2 {
@@ -51,6 +52,10 @@
     left: 0;
     padding: 16px 32px;
     z-index: 2;
+}
+
+#products {
+    height: 100%;
 }
 
 .service-block {
@@ -126,6 +131,10 @@
 
     .hero-text img {
         height: 124px;
+    }
+
+    .product-block {
+        height: calc(100vh - 80px);
     }
 
     .services {
