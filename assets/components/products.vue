@@ -9,12 +9,12 @@
       <div class="product product-lfa">
         <div class="product-content">
           <h3>La Formule Agile</h3>
-          <span>La plateforme dédiée pour le <strong>recrutement</strong>, la <strong>montée en compétences</strong> des collaborateurs et la <strong>communication interne</strong> de votre organisation.</span>
+          <span>Solutions numériques pour <strong>valoriser votre entreprise</strong> et <strong>automatiser les relations sociales et économiques</strong> avec les collaborateurs.</span>
           <ul>
-            <li>Entreprise</li>
-            <li>Agence d'intérim</li>
-            <li>CSE</li>
-            <li>Office de tourisme</li>
+            <li>Automatiser les processus de recrutement</li>
+            <li>Former et informer les collaborateurs</li>
+            <li>Valoriser la marque employeur</li>
+            <li>Fidéliser les collaborateurs</li>
           </ul>
           <a class="btn" href="https://www.laformuleagile.com">En savoir +</a>
         </div>
@@ -24,12 +24,12 @@
       <div class="product product-boosttic">
         <div class="product-content">
           <h3>Boost'tic Créations</h3>
-          <span>Le <strong>Booster</strong> d'<strong>innovation</strong> et d'<strong>information</strong> et des <strong>compétences</strong>.</span>
+          <span>Conception, architecture et développement de <strong>médias et contenus pédagogiques digitalisés</strong>.</span>
           <ul>
-            <li>Péréniser l'information</li>
-            <li>Améliorer les flux d'informations</li>
-            <li>Garder la valeur ajoutée</li>
-            <li>Automatisation de l'information</li>
+            <li>Répondre aux besoins de digitalisation des formations</li>
+            <li>Valoriser et transmettre des informations</li>
+            <li>Présenter un patrimoine culturel</li>
+            <li>Développer des supports innovants</li>
           </ul>
           <a class="btn" href="http://localhost:8000/creations">En savoir +</a>
         </div>
@@ -39,12 +39,12 @@
       <div class="product product-cnco">
         <div class="product-content">
           <h3>Compétences'n Co</h3>
-          <span>La plateforme d'<strong>e-learning</strong> des <strong>formateurs indépendants</strong>.</span>
+          <span>Plateforme <strong>e-learning</strong> des <strong>formations professionnelles</strong> délivrées par les <strong>formateurs indépendants</strong>.</span>
           <ul>
-            <li>Formations digitales innovantes</li>
-            <li>Dans un environnement ludique</li>
-            <li>Accessible partout et adaptée au mobile</li>
-            <li>Certifiées Qualiopi</li>
+            <li>Se former de façon ludique et efficace</li>
+            <li>Bénéficier des compétences de professionnels reconnus</li>
+            <li>Accèder de n'importe où et n'importe quand</li>
+            <li>Faire le choix de formations Certifiées Qualiopi</li>
           </ul>
           <a class="btn" href="https://www.competencesnco.com">En savoir +</a>
         </div>
@@ -117,12 +117,14 @@ export default {
   }
 
   .product-content {
+    width: 424px;
+    height: 512px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 32px;
-    padding: 24px 16px;
+    padding: 32px 24px;
     margin: 16px;
     background-color: rgba(255,255,255,0.6);
     -webkit-transition: background-color 1000ms linear;
@@ -136,6 +138,9 @@ export default {
   }
 
   .product ul {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
     text-align: left;
     list-style: inside url("../images/icons/check.svg");
   }
@@ -177,14 +182,52 @@ export default {
       opacity: 50%;
     }
 
+    .product-content {
+      height: 688px;
+      margin: 8px;
+    }
+
     .product span {
       height: 100%;
-      max-height: 168px;
+      max-height: 160px;
     }
 
     .product ul {
       height: 100%;
-      max-height: 256px;
+      max-height: 272px;
+    }
+
+    .product-lfa {
+      clip-path: polygon(0 0,100% 0,calc(100% - 64px) 100%,0 100%);
+      padding-right: 128px;
+    }
+
+    .product-boosttic {
+      padding: 0 128px 0 64px;
+      clip-path: polygon(64px 0, 100% 0, calc(100% - 64px) 100%, 0 100%);
+    }
+
+    .product-cnco {
+      padding-left: 64px;
+      clip-path: polygon(64px 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+  }
+
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media only screen and (min-width: 1200px) {
+
+    .product-content {
+      height: 656px;
+      margin: 16px;
+    }
+
+    .product span {
+      max-height: 128px;
+    }
+
+    .product ul {
+      max-height: 272px;
     }
 
     .product-lfa {
@@ -204,27 +247,18 @@ export default {
 
   }
 
-  /* Extra large devices (large laptops and desktops, 1200px and up) */
-  @media only screen and (min-width: 1200px) {
-
-    .product span {
-      max-height: 128px;
-    }
-
-    .product ul {
-      max-height: 168px;
-    }
-
-  }
-
   @media only screen and (min-width: 1400px) {
 
+    .product-content {
+      height: 576px;
+    }
+
     .product span {
       max-height: 128px;
     }
 
     .product ul {
-      max-height: 128px;
+      max-height: 232px;
     }
 
   }
