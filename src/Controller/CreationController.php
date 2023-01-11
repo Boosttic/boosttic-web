@@ -30,21 +30,7 @@ class CreationController extends AbstractController
     #[Route('/creations', 'creations_index')]
     public function index(): Response
     {
-        $projectsNotSorted = $this->projectRepository->findOrderByDate();
-        $projects = [];
-        $projectByYear = [];
-        $date = new \DateTime('now');
-        foreach ($projectsNotSorted as $project) {
-            if ($project->getCreatedAt()->format('Y') === $date->format('Y')) {
-                $projectByYear[] = $project;
-            }else {
-                $projects[$date->format('Y')] = $projectByYear;
-                $projectByYear = [];
-                $date = $project->getCreatedAt();
-                $projectByYear[] = $project;
-            }
-        }
-        $projects[$date->format('Y')] = $projectByYear;
+        $projects = $this->projectRepository->findOrderByDate();
         return $this->render('creations/index.html.twig', [
             'projects' => $projects
         ]);
