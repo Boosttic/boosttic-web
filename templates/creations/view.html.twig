@@ -6,8 +6,67 @@
 {% endblock %}
 
 {% block content %}
-    <h1></h1>
     <div class="creation-block">
+        <div class="creation-header">
+            <h1 class="project-phone-name">{{ project.name|raw }}</h1>
+            <picture>
+                {% if project.pictureAvif != null %}
+                    <source srcset="{{ asset('uploads/image/'~article.pictureAvif) }}" class="article-picture">
+                {% endif %}
+                <img width="100%" height="100%" decoding="async" loading="lazy" src="{{ asset('build/images/creations/test.png') }}" alt="{{ project.name }}">
 
+            </picture>
+            <span class="project-type">{{ project.type.name }}</span>
+        </div>
+        <div class="creation-wrapper">
+            <div class="creation-body">
+                <h1 class="project-desktop-name">{{ project.name|raw }}</h1>
+                <div class="project-primary">
+                    <div class="project-customer">
+                        <div>
+                            <h2>Demande client</h2>
+                            <p>
+                                {{ project.request|raw }}
+                            </p>
+                        </div>
+                        <div>
+                            <h2>Les compétences métiers</h2>
+                            <ul class="skills">
+                                {% for skill in project.skills %}
+                                    <li class="skill">{{ skill.name }}</li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="project-testimony-block">
+                        <h2>Leur témoignage</h2>
+                        <div class="project-testimony">
+                            <img class="testimony-decoration" decoding="async" loading="lazy" width="80" height="80" src="{{ asset('build/images/creations/comment.svg') }}" alt="">
+                            {{ project.testimony.content|raw }}
+                            <div class="testimony-author">
+                                <span>{{ project.testimony.author }}</span>
+                                {% if project.testimony.picture == null %}
+                                    <picture>
+                                        <img decoding="async" loading="lazy" width="96" height="96" src="{{ asset('build/images/creations/blank.png') }}" alt="{{ project.testimony.author }}">
+                                    </picture>
+                                {% else %}
+                                    <picture>
+
+                                    </picture>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-solution">
+                    <h2>Notre solution</h2>
+                    {{ project.solution|raw }}
+                </div>
+                <div>
+                    <h2>Découvrir le projet</h2>
+                    {{ project.overview|raw }}
+                </div>
+            </div>
+        </div>
     </div>
 {% endblock %}
