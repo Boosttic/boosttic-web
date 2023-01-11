@@ -1,5 +1,6 @@
 .content {
-    margin: 32px 16px 64px 16px;
+    margin: 0 16px 64px 16px;
+    padding-top: 32px;
 }
 
 form {
@@ -161,7 +162,7 @@ strong {
 @media only screen and (min-width: 992px) {
 
     .content {
-        margin: 32px 16px 124px 16px;
+        margin: 0 16px 124px 16px;
     }
 
     .contact-block {

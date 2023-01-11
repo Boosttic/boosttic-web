@@ -1,5 +1,6 @@
 .content {
-    margin: 32px 16px 64px 16px;
+    margin: 0 16px 64px 16px;
+    padding-top: 32px;
 }
 
 h1 {
@@ -44,8 +45,7 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #B93D57;
-    color: #FFFFFF;
+    color: #ef7d19;
     font-weight: 700;
     border-radius: 50%;
     width: 64px;
