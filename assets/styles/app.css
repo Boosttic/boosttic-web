@@ -216,6 +216,11 @@ strong {
     z-index: 5;
     width: 100%;
     position: fixed;
+    transition: background-color .4s ease-in-out;
+}
+
+.header.scrolled {
+    background-color: #212F4F;
 }
 
 .header a {

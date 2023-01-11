@@ -17,5 +17,12 @@ const $ = require('jquery');
 $(document).ready(function() {
     createApp({
         components: { ExpandMenu }
-    }).mount('#navigation')
+    }).mount('#navigation');
+    $(window).scroll(function () {
+        if ($(this).scrollTop() !== 0) {
+            $('.header').addClass('scrolled')
+        }else {
+            $('.header').removeClass('scrolled')
+        }
+    })
 })
